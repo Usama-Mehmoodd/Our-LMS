@@ -27,3 +27,9 @@
   font-weight: bold;
   cursor: pointer;
 }
+@media only screen and (max-width:576px) {
+      .play-list-items{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+      }
+}
