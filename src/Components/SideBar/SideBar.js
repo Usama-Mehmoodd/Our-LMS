@@ -7,6 +7,7 @@ import {
   faUser,
   faTShirt,
   faHome,
+  faGear,
 } from "@fortawesome/free-solid-svg-icons";
 import { useLocation, useNavigate } from "react-router-dom";
 
@@ -23,8 +24,8 @@ export default function SideBar({ showCanva }) {
       link: "/profile",
     },
     {
-      icon: faTShirt,
-      label: "User",
+      icon: faGear,
+      label: "Settings",
       link: "/user",
     },
   ];

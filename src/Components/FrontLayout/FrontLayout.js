@@ -50,7 +50,7 @@ export default function FrontLayout() {
             className="home"
             style={{
               marginLeft: showCanva ? '250px' : '10px',
-              width : showCanva && '1097px' 
+              width : showCanva && '100%', 
             }}
           >
             {/* here is the home div */}

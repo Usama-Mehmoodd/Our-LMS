@@ -58,15 +58,16 @@ export default function Home() {
     )
       .then((response) => response.json())
       .then((playListData) => {
-        console.log(playListData);
+        console.log('all playlists data: ', playListData);
 
-        let res = playListData.items.slice(19, 23);
-        let elemsArr = res.reverse();
+        // let res = playListData.items.slice(19, 23);
+        // let elemsArr = res.reverse();
 
-        let js1 = playListData.items.slice(16, 17);
-        let js2 = playListData.items.slice(2, 3);
+        // let js1 = playListData.items.slice(16, 17);
+        // let js2 = playListData.items.slice(2, 3);
 
-        setPlayList([...elemsArr, ...js1, ...js2]);
+
+        setPlayList([...playListData.items]);
 
         setTimeout(() => {
           // setLoader(false);
@@ -83,7 +84,7 @@ export default function Home() {
             Learning Management System
           </div>
         </div>
-        <div style={{ margin: "20px 0px", position:'fixed', left:'85%' }} onClick={() => Context.handleOffcanva()}>
+        <div style={{ margin: "20px 0px", }} onClick={() => Context.handleOffcanva()}>
           <button className="pro-btn">Create New Project</button>
         </div>
       </div>
