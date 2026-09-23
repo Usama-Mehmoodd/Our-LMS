@@ -2,7 +2,6 @@
   /* border: 1px solid #000; */
   /* margin-right: 47px; */
   /* position: absolute; */
-  
 }
 .home-inner .banner {
   display: flex;
@@ -11,7 +10,7 @@
   /* width: 1057px; */
    /* border: 1px solid black; */
   background-color: blueviolet;
-  z-index: -9;
+  /* z-index: -9; */
   padding: 0px 20px;
   border-radius: 4px;
 }
@@ -174,5 +173,90 @@
 
     }
 
+
+}
+
+
+@media screen and (max-width: 576px) {
+
+  .home-inner {
+    width: 100%;
+  }
+
+  .home-inner .banner {
+    width: 100%;
+    min-height: 110px;
+
+    box-sizing: border-box;
+
+    padding: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 6px;
+
+    background-color: blueviolet;
+  }
+
+  .banner .name {
+    font-size: 13px !important;
+    line-height: 1.4;
+  }
+
+  .banner .pro-btn {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 576px) {
+
+  .home-inner .cards {
+    display: grid !important;
+
+    grid-template-columns: repeat(2, 1fr) !important;
+
+    gap: 8px;
+
+    margin: -45px 0 0 0 !important;
+
+    padding: 0 5px;
+  }
+
+  .cards .grid {
+    height: 75px;
+
+    margin: 0 !important;
+
+    padding: 8px;
+
+    border-radius: 6px;
+
+    font-size: 12px;
+
+    box-sizing: border-box;
+  }
+
+  .grid .icon {
+    width: 20px !important;
+    height: 20px !important;
+
+    padding: 3px !important;
+
+    font-size: 12px;
+
+    border-radius: 4px !important;
+  }
+
+  .projectnum .counting {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .projectnum .completed {
+    font-size: 10px;
+  }
 
 }

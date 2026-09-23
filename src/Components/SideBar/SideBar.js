@@ -10,8 +10,9 @@ import {
   faGear,
 } from "@fortawesome/free-solid-svg-icons";
 import { useLocation, useNavigate } from "react-router-dom";
+import { useApp } from "../context/AppContext";
 
-export default function SideBar({ showCanva }) {
+export default function SideBar({handleShowCanva}) {
   let dashBoardArr = [
     {
       icon: faHome,
@@ -33,9 +34,13 @@ export default function SideBar({ showCanva }) {
   const navigate = useNavigate();
   const location = useLocation();
 
+
+  const {showCanva} = useApp();
+
   return (
     <div
-      className="sidebar"
+      // className="sidebar"
+     className={`sidebar ${handleShowCanva ? "sidebar-open" : "sidebar-close"}`}
       style={{
         left: showCanva ? "10px" : "-230px",
         

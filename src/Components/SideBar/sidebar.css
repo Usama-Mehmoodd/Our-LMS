@@ -37,3 +37,61 @@
     color: blueviolet;
 
 }
+
+@media screen and (max-width: 576px) {
+
+  .sidebar {
+    width: 230px;
+    min-height: calc(100vh - 70px);
+    height: calc(100vh - 70px);
+
+    position: fixed;
+    top: 70px;
+    left: 0;
+
+    margin-top: 0;
+    border-radius: 0 4px 4px 0;
+
+    background-color: #fff;
+
+    z-index: 1000;
+
+    overflow-y: auto;
+
+    transition: all 0.5s ease;
+  }
+
+  .sidebar .sidebar-data {
+    display: flex;
+    align-items: center;
+
+    padding: 12px 15px;
+
+    cursor: pointer;
+  }
+
+  .sidebar-data .icon {
+    margin-right: 12px;
+  }
+
+  .sidebar-data .icon:hover {
+    color: blueviolet;
+  }
+
+  .sidebar-hover:hover {
+    color: blueviolet;
+  }
+
+}
+
+@media screen and (max-width: 576px) {
+
+  .sidebar-open {
+    transform: translateX(0);
+  }
+
+  .sidebar-close {
+    transform: translateX(-100%);
+  }
+
+}
