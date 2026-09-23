@@ -80,3 +80,46 @@
   }
 
 }
+
+
+
+/* =========================================================
+   frontlayout.css  (responsive)
+   --content-top = space reserved for the fixed top bar
+   ========================================================= */
+.main {
+  --content-top: 85px;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background-color: #eaeaea;
+}
+
+.sideBar {
+  display: flex;
+}
+
+.home {
+  flex: 1;
+  min-width: 0; /* lets the content shrink instead of overflowing */
+  margin: var(--content-top) 10px 20px 0; /* margin-left is set inline in FrontLayout.jsx */
+  border-radius: 4px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: margin-left 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    --content-top: 78px; /* the top bar is shorter on small screens */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .home {
+    box-shadow: none;
+    background: transparent;
+  }
+}
