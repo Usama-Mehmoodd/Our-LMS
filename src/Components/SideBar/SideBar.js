@@ -11,8 +11,11 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useApp } from "../context/AppContext";
+import { useTheme } from "../context/ThemeContext";
 
-export default function SideBar({handleShowCanva}) {
+
+
+export default function SideBar({ handleShowCanva }) {
   let dashBoardArr = [
     {
       icon: faHome,
@@ -30,20 +33,22 @@ export default function SideBar({handleShowCanva}) {
       link: "/user",
     },
   ];
-
+  
   const navigate = useNavigate();
   const location = useLocation();
-
-
-  const {showCanva} = useApp();
-
+  
+  const { showCanva } = useApp();
+  
+  const { theme } = useTheme();
+  console.log("sidebar", theme);
   return (
     <div
-      // className="sidebar"
-     className={`sidebar ${handleShowCanva ? "sidebar-open" : "sidebar-close"}`}
+    // className="sidebar"
+    className={`sidebar ${handleShowCanva ? "sidebar-open" : "sidebar-close"}
+      theme ${theme === "dark" ? "dark-theme" : "light-theme"}`}
       style={{
         left: showCanva ? "10px" : "-230px",
-        
+        // backgroundColor : theme === "dark" ? "#000" : "#fff"
       }}
     >
       <br />
@@ -53,7 +58,7 @@ export default function SideBar({handleShowCanva}) {
           key={v.label + i}
           className="sidebar-data sidebar-hover"
           onClick={() => navigate(v.link)}
-          style={{ color: location.pathname === v.link ? "blueviolet" : "" }}
+          style={{ color: location.pathname === v.link ? "blueviolet" : "", }}
         >
           <FontAwesomeIcon className="icon" icon={v.icon} />
           <span style={{ marginLeft: "20px" }}>{v.label}</span>

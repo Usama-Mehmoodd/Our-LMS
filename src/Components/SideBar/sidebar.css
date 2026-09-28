@@ -13,7 +13,13 @@
     transition: all 0.5s linear;
     background-color: #fff;
 
+
 }
+.dark-theme {
+  background-color: #272626;
+  color: #fff;
+}
+
 @media screen and (max-width:576px)
 {
    .sidebar {
