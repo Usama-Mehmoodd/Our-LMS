@@ -13,29 +13,34 @@ import User from "./Components/User/User";
 
 import { Route, Routes } from "react-router-dom";
 import { useApp, AppProvider } from "./Components/context/AppContext";
+import { ThemeProvider } from "./Components/context/ThemeContext";
+
 
 export default function App() {
 
 
   
   return (
+    <ThemeProvider>
+
     <AppProvider>
 
       <Routes>
       
         <Route element={<FrontLayout />}>
       
-          <Route path="/topbar" element={<TopBar />} />
-          <Route path="/" element={<Home />} />
-          <Route path="/sidebar" element={<SideBar />} />
-          <Route path="/footer" element={<Footer />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/user" element={<User />} />
-          <Route path="/playListItem/:playListId" element={<PlayListItem />} />
-          <Route path="/videoplay/:videoId" element={<PlayVideo />} />
+                    <Route path="/topbar" element={<TopBar />} />
+                    <Route path="/" element={<Home />} />
+                    <Route path="/sidebar" element={<SideBar />} />
+                    <Route path="/footer" element={<Footer />} />
+                    <Route path="/profile" element={<Profile />} />
+                    <Route path="/user" element={<User />} />
+                    <Route path="/playListItem/:playListId" element={<PlayListItem />} />
+                    <Route path="/videoplay/:videoId" element={<PlayVideo />} />
       
-        </Route>
-      </Routes>
-    </AppProvider>
+              </Route>
+            </Routes>
+        </AppProvider>
+    </ThemeProvider>
   );
 }

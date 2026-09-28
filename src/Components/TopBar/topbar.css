@@ -1,7 +1,7 @@
-/* =========================================================
+/* 
    topbar.css  (responsive)
    Breakpoints: 900px, 768px (single row, search hidden), 480px
-   ========================================================= */
+ */
 
 h6 {
   padding: 0;
@@ -22,7 +22,7 @@ h6 {
   gap: 1rem;
   padding: 0.6rem 1rem;
   border-radius: 10px;
-  background-color: #ffffff;
+  background-color: var(--surface);
   box-shadow: 0 2px 10px rgba(15, 23, 42, 0.08), 0 1px 3px rgba(0, 0, 0, 0.06);
   z-index: 900;
 }
@@ -42,16 +42,16 @@ h6 {
   align-items: center;
   justify-content: center;
   font-size: 1.1rem;
-  color: #1e293b;
+  color: var(--text);
   border: none;
   outline: none;
   cursor: pointer;
   padding: 0.5rem 0.75rem;
   border-radius: 8px;
-  background-color: #f8fafc;
+  background-color: var(--surface-2);
   transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease;
 }
-.menu-btn:hover { background-color: #eff6ff; color: #2563eb; }
+.menu-btn:hover { background-color: var(--accent-soft); color: var(--accent-strong); }
 .menu-btn:active { transform: scale(0.95); }
 
 .comName {
@@ -62,7 +62,7 @@ h6 {
   margin: 0;
   font-size: 1rem;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--text);
   letter-spacing: -0.01em;
   white-space: nowrap;
   overflow: hidden;
@@ -81,17 +81,17 @@ h6 {
   border-radius: 8px;
   font-size: 0.9rem;
   font-family: inherit;
-  border: 1.5px solid #e2e8f0;
+  border: 1.5px solid var(--border);
   outline: none;
-  background: #f8fafc;
-  color: #0f172a;
+  background: var(--surface-2);
+  color: var(--text);
   transition: border-color 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
 }
-.search input::placeholder { color: #94a3b8; }
-.search input:hover { border-color: #cbd5e1; }
+.search input::placeholder { color: var(--text-faint); }
+.search input:hover { border-color: var(--border-strong); }
 .search input:focus {
-  background: #ffffff;
-  border-color: #3b82f6;
+  background: var(--surface);
+  border-color: var(--accent);
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
 }
 
@@ -115,13 +115,13 @@ h6 {
   border: none;
   border-radius: 50%;
   background: none;
-  color: #64748b;
+  color: var(--text-muted);
   font-size: 1.1rem;
   cursor: pointer;
   user-select: none;
   transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease;
 }
-.icon-btn:hover { background-color: #f1f5f9; color: #0f172a; }
+.icon-btn:hover { background-color: var(--surface-3); color: var(--text); }
 .icon-btn:active { transform: scale(0.95); }
 
 .badge {
@@ -139,7 +139,7 @@ h6 {
   font-size: 0.65rem;
   font-weight: 700;
   line-height: 1;
-  border: 2px solid #ffffff;
+  border: 2px solid var(--surface);
   border-radius: 999px;
 }
 
@@ -147,9 +147,9 @@ h6 {
 .dropdown {
   position: absolute;
   top: calc(100% + 10px);
-  background: #ffffff;
+  background: var(--surface);
   border-radius: 12px;
-  border: 1px solid #f1f5f9;
+  border: 1px solid var(--surface-3);
   box-shadow: 0 12px 32px -8px rgba(15, 23, 42, 0.18),
     0 4px 12px rgba(15, 23, 42, 0.08);
   overflow: hidden;
@@ -180,7 +180,7 @@ h6 {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  background: linear-gradient(135deg, var(--accent), #8b5cf6);
   color: #ffffff;
   font-size: 1.2rem;
 }
@@ -193,7 +193,7 @@ h6 {
 .profile-name {
   font-size: 0.9rem;
   font-weight: 600;
-  color: #0f172a;
+  color: var(--text);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -201,30 +201,30 @@ h6 {
 .profile-link {
   font-size: 0.78rem;
   font-weight: 500;
-  color: #3b82f6;
+  color: var(--accent);
   text-decoration: none;
   transition: color 0.15s ease;
 }
-.profile-link:hover { color: #2563eb; text-decoration: underline; }
+.profile-link:hover { color: var(--accent-strong); text-decoration: underline; }
 
 .dropdown-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0.9rem 1rem;
-  border-bottom: 1px solid #f1f5f9;
+  border-bottom: 1px solid var(--surface-3);
 }
 .dropdown-header h4 {
   margin: 0;
   font-size: 0.9rem;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--text);
   letter-spacing: -0.01em;
 }
 .mark-read {
   background: transparent;
   border: none;
-  color: #3b82f6;
+  color: var(--accent);
   font-size: 0.75rem;
   font-weight: 600;
   font-family: inherit;
@@ -233,7 +233,7 @@ h6 {
   border-radius: 6px;
   transition: background 0.15s ease;
 }
-.mark-read:hover { background: #eff6ff; }
+.mark-read:hover { background: var(--accent-soft); }
 
 .dropdown-body { padding: 0.4rem; max-height: 320px; overflow-y: auto; }
 
@@ -244,12 +244,12 @@ h6 {
   padding: 0.65rem 0.75rem;
   border-radius: 8px;
   text-decoration: none;
-  color: #334155;
+  color: var(--text-2);
   cursor: pointer;
   transition: background 0.15s ease, color 0.15s ease;
 }
-.dropdown-item:hover { background: #f8fafc; color: #0f172a; }
-.dropdown-item:hover .item-icon { background: #dbeafe; color: #2563eb; }
+.dropdown-item:hover { background: var(--surface-2); color: var(--text); }
+.dropdown-item:hover .item-icon { background: var(--accent-soft-2); color: var(--accent-strong); }
 
 .item-icon {
   flex-shrink: 0;
@@ -259,8 +259,8 @@ h6 {
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  background: #f1f5f9;
-  color: #64748b;
+  background: var(--surface-3);
+  color: var(--text-muted);
   font-size: 0.85rem;
   transition: background 0.15s ease, color 0.15s ease;
 }
@@ -276,26 +276,26 @@ h6 {
   text-transform: capitalize;
 }
 
-.dropdown-divider { border: none; height: 1px; background: #f1f5f9; margin: 0; }
+.dropdown-divider { border: none; height: 1px; background: var(--surface-3); margin: 0; }
 
 .dropdown-footer {
   padding: 0.6rem 0.75rem;
-  border-top: 1px solid #f1f5f9;
+  border-top: 1px solid var(--surface-3);
   text-align: center;
 }
 .view-all {
   font-size: 0.78rem;
   font-weight: 600;
-  color: #3b82f6;
+  color: var(--accent);
   text-decoration: none;
   transition: color 0.15s ease;
 }
-.view-all:hover { color: #2563eb; text-decoration: underline; }
+.view-all:hover { color: var(--accent-strong); text-decoration: underline; }
 
 .dropdown-body::-webkit-scrollbar { width: 6px; }
 .dropdown-body::-webkit-scrollbar-track { background: transparent; }
-.dropdown-body::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 999px; }
-.dropdown-body::-webkit-scrollbar-thumb:hover { background: #cbd5e1; }
+.dropdown-body::-webkit-scrollbar-thumb { background: var(--border); border-radius: 999px; }
+.dropdown-body::-webkit-scrollbar-thumb:hover { background: var(--border-strong); }
 
 /* =========================================================
    RESPONSIVE
